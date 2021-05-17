@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Կապ մեզ հետ</title>
+</head>
+<body>
+  <header>
+    <div class="bg">
+    <div class="filter"></div>
+      <p>
+        Երաժշտությունը - միակ համաշխարհային լեզուն է, նրան հարկավոր չէ թարգմանել, նրանում հոգին խոսում է հոգու հետ."
+        (Բերտոլդ Աուերբախ)
+      </p>
+    </div>
+  </header>
+  <section id="article" class="container">
+    <div id="sidebar">
+      <nav>
+        <!-- <div id="close"><a href="">x</a></div> -->
+        <ul>
+          <li><a href="index.html">&#10150;<strong>Գլխավոր</strong></a></li>
+          <li><a href="arm_music.html">&#10150;<strong>Հայկական երաժշտություն</strong></a></li>
+          <li><a href="komitas.html">&#10150;<strong>Կոմիտաս</strong></a></li>
+          <li><a href="masterpiece.html">&#10150;<strong>Դասական երաժշտության գլուխգործոցներ</strong></a></li>
+          <li><a href="composer.html">&#10150;<strong>18-րդ դարի կոմպոզիտորներ</strong></a></li>
+          <li><a href="ital_music.html">&#10150;<strong>Իտալական երաժշտության պատմություն</strong></a></li>
+          <li><a href="mus_instruments.html">&#10150;<strong>Երաժշտական գործիքներ</strong></a></li>
+          <li><a href="machines.html">&#10150;<strong>Մեքենաների երաժշտական անվանումները</strong></a></li>
+          <li><a href="mults.html">&#10150;<strong>Դասական երաժշտություն անիմացիայում</strong></a></li>
+          <li><a href="personas.html">&#10150;<strong>Անհատականություն</strong></a></li>
+          <li>
+            <a class="btn, s_btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">&#10148;<strong>Փոքրիկ ժամանց</strong></a>
+          </li>
+          <li class="active"><a href="#">&#10150;<strong>Կապ մեզ հետ</strong></a></li>
+        </ul>
+      </nav>
+    </div>
+    <button id="hamburgerBtn" class="close">&#9776</button>
+    <div id="article-body">
+        <div id="contact-form">
+            <h2 class='title'>Կապ մեզ հետ</h2>
+            <div class='container'>
+                <form class="form">
+                    <input 
+                        name="fName"  
+                        class="input" 
+                        type="text" 
+                        placeholder="Անուն*"
+                    />
+                    <!-- <input 
+                        name="lName" 
+                        class="input"
+                        type="text" 
+                        placeholder="Ազգանուն*"
+                    /><br/> -->
+                    <input 
+                        name="email" 
+                        class="input"
+                        type="email" 
+                        placeholder="Email*"
+                    /><br/>
+                    <!-- <input 
+                        name="phone" 
+                        class="input"
+                        type="number" 
+                        placeholder="Հեռախոսահամար"
+                    /><br/> -->
+                    <textarea 
+                        name="message" 
+                        class="input"
+                        placeholder="Հաղորդագրություն"
+                    ></textarea>
+                    <button type="button" class="danger" onclick="requestDoContact()">Ուղարկել</button>
+                </form>
+            </div>
+        </div>
+  </section>
+  <section id="quiz_container">
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title points" id="exampleModalLongTitle">Փոքրիկ ժամանց</h1>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="readyContainer"><p class="ready"><strong>Պատրաստ ես՞</strong></p></div>
+            <div id="question_container" class="hide">
+              <div id="question"></div>
+              <div id="answer_btns">
+                <button class="btn">Պատասխան 1</button>
+                <button class="btn">Պատասխան 2</button>
+                <button class="btn">Պատասխան 3</button>
+                <button class="btn">Պատասխան 4</button>
+              </div>
+            </div>
+            <div class="controls"></div>
+            <div id="finish_txt" class="hide"></div>
+          </div>
+          <div class="modal-footer">
+            <button id="start_btn" class="start_btn btn">Սկսել</button>
+            <button id="next_btn" class="next_btn btn hide">Հաջորդը</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-dark">
+    <p>
+      Մենք սոցիալական ցանցերում
+    </p>
+    <a href="">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="">
+      <i class="fab fa-snapchat-square"></i>
+    </a>
+    <a href="">
+      <i class="fab fa-pinterest"></i>
+    </a>
+    <a href="">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <p>
+      Ստեղծվել է Գևորգի կողմից
+    </p>
+  </footer>
+  <script src="./src/js/index.js"></script>
+  <script src="./src/js/requests.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="./src/js/quiz.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

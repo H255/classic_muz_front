@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>Sign In</title>
+</head>
+<body>
+    <div id="login-form">
+        <h2 class="title">Մուտք գործել</h2>
+        <form action="" method="post">
+            <div class="container">
+            <label for="uname"><b>Email</b></label>
+            <input type="text" placeholder="Գրեք ձեր Email" name="uname" value="admin" required>
+        
+            <label for="psw"><b>Գաղտնաբառ</b></label>
+            <input type="password" placeholder="Գրեք ձեր գաղտնաբառը" name="psw" required>
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember">Հիշեք ինձ
+            </label>
+            </div>
+        
+            <div class="container" style="background-color:#f1f1f1">
+                <a href="./index.html" type="submit" class="cancelbtn">Հետ դարձ</a>
+                <button class="submit" type="button" onclick="requestLogin()">Մուտք գործել</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./src/js/requests.js"></script>
+</body>
+</html>
